@@ -26,7 +26,7 @@ project(group: "io.fusionauth", name: "fusionauth-javascript-client", version: "
 
   publications {
     main {
-      publication(name: "fusionauth-javascript-client", type: "zip", file: "build/fusionauth-javascript-client-${project.version}.zip")
+      publication(name: "fusionauth-javascript-client", type: "zip", file: "build/fusionauth-javascript-client.zip")
     }
   }
 }
