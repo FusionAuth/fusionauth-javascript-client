@@ -21,7 +21,9 @@ var assert = buster.assertions.assert;
 buster.testCase('FusionAuthClient', {
 
   setUp: function() {
-    this.client = new FusionAuthClient('bf69486b-4733-4470-a592-f1bfce7af580', 'http://localhost:9011');
+    const fusionauthUrl = process.env.FUSIONAUTH_URL || "https://local.fusionauth.io";
+    const fusionauthApiKey = process.env.FUSIONAUTH_API_KEY || "bf69486b-4733-4470-a592-f1bfce7af580";
+    this.client = new FusionAuthClient(fusionauthApiKey, fusionauthUrl);
   },
 
   'retrieveApplicationsTest': function(done) {
